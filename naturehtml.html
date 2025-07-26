@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fã Clube do Nature</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fff0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #228B22;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #2e7d32;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav button {
+      background-color: white;
+      color: #2e7d32;
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #c8facc;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: #2e7d32;
+    }
+
+    .imagem {
+      border: 2px dashed #2e7d32;
+      background-color: #ffffff;
+      margin: 20px 0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .imagem img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .depoimento {
+      background-color: #e6ffe6;
+      border-left: 5px solid #2e7d32;
+      margin: 15px 0;
+      padding: 10px 15px;
+      font-style: italic;
+    }
+
+    #votos {
+      font-size: 1.5em;
+      color: #2e7d32;
+      margin: 15px 0;
+    }
+
+    footer {
+      background-color: #228B22;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fã Clube do Nature</h1>
+    <p>O site oficial da pessoa mais incrível de todas!</p>
+  </header>
+
+  <nav>
+    <button onclick="scrollToSection('porque')">Porque ele é incrível?</button>
+    <button onclick="scrollToSection('amor')">Por que amamos ele?</button>
+    <button onclick="scrollToSection('galeria')">Galeria de imagens</button>
+    <button onclick="scrollToSection('votar')">Votar ele como o melhor</button>
+  </nav>
+
+  <section id="porque">
+    <h2>🌟 Porque ele é incrível?</h2>
+    <p>Nature é alguém que sempre está disposto a ajudar, inspira todos ao seu redor e possui um coração gigante. Ele se destaca em tudo que faz e nunca desiste dos seus sonhos!</p>
+  </section>
+
+  <section id="amor">
+    <h2>❤️ Por que amamos ele?</h2>
+    <div class="depoimento">"Ele sempre me tratou com carinho e respeito." – Fã nº 1</div>
+    <div class="depoimento">"Nature é como um irmão pra mim, uma pessoa que posso confiar." – Fã nº 2</div>
+    <div class="depoimento">"Nunca conheci alguém tão verdadeiro quanto ele." – Fã nº 3</div>
+  </section>
+
+  <section id="galeria">
+    <h2>📸 Galeria de Imagens</h2>
+
+    <div class="imagem">
+      <p><strong>Imagem 1:</strong> Nature brilhando!</p>
+      <img src="https://via.placeholder.com/600x300.png?text=Nature+1" alt="Imagem 1 de Nature">
+    </div>
+
+    <div class="imagem">
+      <p><strong>Imagem 2:</strong> Um momento marcante.</p>
+      <img src="https://via.placeholder.com/600x300.png?text=Nature+2" alt="Imagem 2 de Nature">
+    </div>
+  </section>
+
+  <section id="votar">
+    <h2>🏆 Votar ele como o melhor</h2>
+    <p>Clique no botão abaixo para votar no Nature como o melhor do mundo!</p>
+    <div id="votos">Votos: <span id="contador">0</span></div>
+    <button onclick="adicionarVoto()" style="padding:10px 20px; font-size: 16px;">Votar</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fã Clube do Nature • Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    let votos = 0;
+
+    function adicionarVoto() {
+      votos++;
+      document.getElementById('contador').textContent = votos;
+    }
+  </script>
+</body>
+</html>
